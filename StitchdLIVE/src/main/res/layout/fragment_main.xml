@@ -2,15 +2,162 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/darker_gray"
     tools:context="sv.franzaine.stichdlive.MainActivity$PlaceholderFragment">
 
     <TextView
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+            <ImageView
+                android:id="@+id/artistdescfullbleed"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:scaleType="center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/avengedsevenfoldfullbleed"/>
+            <TextView
+                android:id="@+id/artistdesctitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/artistdescfullbleed"
+                android:gravity="center"
+                android:text="Avenged Sevenfold"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_marginLeft="5px"
+                android:layout_marginRight="5px"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px"
+                />
+            <TextView
+                android:id="@+id/artistdesctext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/artistdesctitle"
+                android:text="Avenged Sevenfold (sometimes abbreviated as A7X) are an American rock band from Huntington Beach, California, formed in 1999. The band's members are lead vocalist M. Shadows, rhythm guitarist and backing vocalist Zacky Vengeance, lead guitarist and backing vocalist Synyster Gates, bass guitarist Johnny Christ and drummer Arin Ilejay."
+                android:layout_marginLeft="5px"
+                android:layout_marginRight="5px"
+                android:layout_marginTop="5px"
+                android:layout_marginBottom="5px"
+                />
+            <View
+                android:id="@+id/artisthr"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/artistdesctext"
+                android:layout_marginRight="25px"
+                android:layout_marginLeft="25px"
+                android:background="@android:color/black"
+                />
+            <CheckBox
+                android:id="@+id/artistfancheckbox"
+                android:layout_below="@+id/artisthr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you a fan?"
+                android:layout_marginLeft="5px"
+                android:layout_marginRight="5px"
+                android:layout_marginTop="5px"
+                android:layout_marginBottom="5px"
+                />
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30px"
+            android:background="@android:color/white">
+            <ImageView
+                android:id="@+id/eventdescfullbleed"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:scaleType="center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/avengedsevenfoldfullbleed"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparantwhite">
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Planned"/>
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="->"/>
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ongoing"/>
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="->"/>
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Past"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/eventdesctitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventdescfullbleed"
+                android:gravity="center"
+                android:text="Annihalation Tour"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_marginLeft="5px"
+                android:layout_marginRight="5px"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px"
+                />
+            <TextView
+                android:id="@+id/eventdesctext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventdesctitle"
+                android:text="Avenged Sevenfold (sometimes abbreviated as A7X) are an American rock band from Huntington Beach, California, formed in 1999. The band's members are lead vocalist M. Shadows, rhythm guitarist and backing vocalist Zacky Vengeance, lead guitarist and backing vocalist Synyster Gates, bass guitarist Johnny Christ and drummer Arin Ilejay."
+                android:layout_marginLeft="5px"
+                android:layout_marginRight="5px"
+                android:layout_marginTop="5px"
+                android:layout_marginBottom="5px"
+                />
+
+        </RelativeLayout>
+        </LinearLayout>
+        </ScrollView>
 
 </RelativeLayout>
