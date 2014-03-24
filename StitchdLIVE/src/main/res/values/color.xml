@@ -3,5 +3,6 @@
 
     <color name="StichdLIVEOrange">#FF3300</color>
     <color name="transparantwhite">#99FFFFFF</color>
+    <color name="backgroundColorApp">#ccc</color>
 
 </resources>

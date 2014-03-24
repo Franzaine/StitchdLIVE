@@ -19,11 +19,8 @@
 
         <activity
         android:name=".av7foldannisthlmactivity"
-        android:label="AV7F" >
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        android:label="AV7F"
+        android:parentActivityName="sv.franzaine.stichdlive.MainActivity" >
         </activity>
 
     </application>
