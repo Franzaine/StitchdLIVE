@@ -72,7 +72,6 @@
                 android:layout_below="@+id/artisthr"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="Are you a fan?"
                 android:layout_marginLeft="5px"
                 android:layout_marginRight="5px"
@@ -84,11 +83,13 @@
 
 
         <RelativeLayout
+            android:id="@+id/avengedsevenfoldannihalationtourstockholm"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30px"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:onClick="cardPressed">
             <ImageView
                 android:id="@+id/eventdescfullbleed"
                 android:layout_height="wrap_content"
@@ -165,11 +166,25 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                     <ImageView
-                        android:id="@+id/placeholderimage"
+                        android:id="@+id/typeholderimage"
                         android:layout_width="@dimen/inline_picture_size"
                         android:layout_height="@dimen/inline_picture_size"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_action_place"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/typeholderimage"
+                        android:layout_alignBottom="@id/typeholderimage"
+                        android:text="Concert"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/placeholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/typeholderimage"
                         android:src="@drawable/ic_action_place"/>
                     <TextView
                         android:id="@+id/placeholdertext"

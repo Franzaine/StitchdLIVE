@@ -6,8 +6,10 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -142,6 +144,13 @@ public class MainActivity extends Activity
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+    }
+
+    public void cardPressed(View view){
+
+        Log.v("cardlog", "card pressed! " + view.getId());
+        Intent secondActivity = new Intent(this, av7foldannisthlmactivity.class);
+        startActivity(secondActivity);
     }
 
 }
