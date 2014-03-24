@@ -23,7 +23,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:visibility="visible">
             <ImageView
                 android:id="@+id/artistdescfullbleed"
                 android:layout_height="wrap_content"
@@ -71,6 +72,7 @@
                 android:layout_below="@+id/artisthr"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Are you a fan?"
                 android:layout_marginLeft="5px"
                 android:layout_marginRight="5px"
@@ -78,6 +80,8 @@
                 android:layout_marginBottom="5px"
                 />
             </RelativeLayout>
+
+
 
         <RelativeLayout
             android:orientation="vertical"
@@ -110,7 +114,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="->"/>
+                    android:text="→"/>
                 <TextView
                     android:layout_width="0px"
                     android:layout_weight="1"
@@ -122,7 +126,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="->"/>
+                    android:text="→"/>
                 <TextView
                     android:layout_width="0px"
                     android:layout_weight="1"
@@ -130,13 +134,14 @@
                     android:gravity="center"
                     android:text="Past"/>
             </LinearLayout>
+
             <TextView
                 android:id="@+id/eventdesctitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/eventdescfullbleed"
                 android:gravity="center"
-                android:text="Annihalation Tour"
+                android:text="Annihalation Tour - Stockholm"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:layout_marginLeft="5px"
@@ -144,17 +149,162 @@
                 android:layout_marginTop="10px"
                 android:layout_marginBottom="10px"
                 />
-            <TextView
+            <LinearLayout
                 android:id="@+id/eventdesctext"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/eventdesctitle"
-                android:text="Avenged Sevenfold (sometimes abbreviated as A7X) are an American rock band from Huntington Beach, California, formed in 1999. The band's members are lead vocalist M. Shadows, rhythm guitarist and backing vocalist Zacky Vengeance, lead guitarist and backing vocalist Synyster Gates, bass guitarist Johnny Christ and drummer Arin Ilejay."
                 android:layout_marginLeft="5px"
                 android:layout_marginRight="5px"
                 android:layout_marginTop="5px"
                 android:layout_marginBottom="5px"
-                />
+                >
+                <RelativeLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/placeholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_action_place"/>
+                    <TextView
+                        android:id="@+id/placeholdertext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/placeholderimage"
+                        android:layout_alignBottom="@id/placeholderimage"
+                        android:text="Globen, Stockholm, Sweden"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/dateholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/placeholderimage"
+                        android:src="@drawable/ic_action_date"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/dateholderimage"
+                        android:layout_alignBottom="@id/dateholderimage"
+                        android:layout_centerVertical="true"
+                        android:text="2014-04-03"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/timeholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/dateholderimage"
+                        android:src="@drawable/ic_action_time"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/timeholderimage"
+                        android:layout_alignBottom="@id/timeholderimage"
+                        android:layout_centerVertical="true"
+                        android:text="19:00-23:00"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/ageholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/timeholderimage"
+                        android:src="@drawable/ic_action_age"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ageholderimage"
+                        android:layout_alignBottom="@id/ageholderimage"
+                        android:layout_centerVertical="true"
+                        android:text="18+"
+                        android:singleLine="true"/>
+                    </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/postholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_action_posts"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/postholderimage"
+                        android:layout_alignBottom="@id/postholderimage"
+                        android:text="4 posts by artist"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/commentholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/postholderimage"
+                        android:src="@drawable/ic_action_comments"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/commentholderimage"
+                        android:layout_alignBottom="@id/commentholderimage"
+                        android:layout_centerVertical="true"
+                        android:text="15 comments"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/pictureholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/commentholderimage"
+                        android:src="@drawable/ic_action_pictures"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/pictureholderimage"
+                        android:layout_alignBottom="@id/pictureholderimage"
+                        android:layout_centerVertical="true"
+                        android:text="27 pictures"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/videoholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/pictureholderimage"
+                        android:src="@drawable/ic_action_video"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/videoholderimage"
+                        android:layout_alignBottom="@id/videoholderimage"
+                        android:layout_centerVertical="true"
+                        android:text="1 video"
+                        android:singleLine="true"/>
+                    <ImageView
+                        android:id="@+id/setlistholderimage"
+                        android:layout_width="@dimen/inline_picture_size"
+                        android:layout_height="@dimen/inline_picture_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/videoholderimage"
+                        android:src="@drawable/ic_action_setlist"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/setlistholderimage"
+                        android:layout_alignBottom="@id/setlistholderimage"
+                        android:layout_centerVertical="true"
+                        android:text="Setlist available"
+                        android:singleLine="true"/>
+                </RelativeLayout>
+            </LinearLayout>
 
         </RelativeLayout>
         </LinearLayout>
