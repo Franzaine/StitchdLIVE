@@ -2,12 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColorApp">
-
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    android:background="@color/backgroundColorApp"
+    tools:context="sv.franzaine.stichdlive.MainActivity$PlaceholderFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,45 +35,479 @@
 
                 <TextView
                     android:id="@+id/artistdesctitle"
-                    android:text="Avenged Sevenfold"
+                    android:text="Annihalation Tour - Stockholm"
                     android:layout_below="@+id/artistdescfullbleed"
                     style="@style/topCardTitle"
                     />
 
-                <TextView
-                    android:id="@+id/artistdesctext"
+                <LinearLayout
+                    android:id="@+id/eventdesctext"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/artistdesctitle"
-                    android:text="Avenged Sevenfold (sometimes abbreviated as A7X) are an American rock band from Huntington Beach, California, formed in 1999. The band's members are lead vocalist M. Shadows, rhythm guitarist and backing vocalist Zacky Vengeance, lead guitarist and backing vocalist Synyster Gates, bass guitarist Johnny Christ and drummer Arin Ilejay."
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="5px"
+                    android:layout_marginBottom="5px"
+                    >
+                    <RelativeLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:id="@+id/typeholderimage"
+                            style="@style/cardFactIcon"
+                            android:src="@drawable/ic_action_type"/>
+                        <TextView
+                            android:layout_toRightOf="@+id/typeholderimage"
+                            android:layout_alignBottom="@id/typeholderimage"
+                            android:text="Ongoing"
+                            style="@style/cardFactText"/>
+                        <ImageView
+                            android:id="@+id/ageholderimage"
+                            style="@style/cardFactIcon"
+                            android:layout_below="@+id/typeholderimage"
+                            android:src="@drawable/ic_action_age"/>
+                        <TextView
+                            android:layout_toRightOf="@+id/ageholderimage"
+                            android:layout_alignBottom="@id/ageholderimage"
+                            android:text="18+"
+                            style="@style/cardFactText"/>
+                    </RelativeLayout>
 
-                    style="@style/topCardText"
-                    />
+                    <RelativeLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/dateholderimage"
+                            style="@style/cardFactIcon"
+                            android:src="@drawable/ic_action_date"/>
+                        <TextView
+                            android:layout_toRightOf="@+id/dateholderimage"
+                            android:layout_alignBottom="@id/dateholderimage"
+                            android:text="2014-03-25"
+                            style="@style/cardFactText"/>
+                        <ImageView
+                            android:id="@+id/timeholderimage"
+                            android:layout_below="@+id/dateholderimage"
+                            style="@style/cardFactIcon"
+                            android:src="@drawable/ic_action_time"/>
+                        <TextView
+                            android:layout_toRightOf="@+id/timeholderimage"
+                            android:layout_alignBottom="@id/timeholderimage"
+                            android:text="19:00-23:00"
+                            style="@style/cardFactText"/>
+                    </RelativeLayout>
+                </LinearLayout>
 
                 <View
                     android:id="@+id/artisthr"
-                    android:layout_below="@+id/artistdesctext"
+                    android:layout_below="@+id/eventdesctext"
 
                     style="@style/horizontalRuler"
+                    android:layout_marginTop="5dp"
                     />
+
+
 
                 <CheckBox
                     android:id="@+id/artistfancheckbox"
                     android:layout_below="@+id/artisthr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/checkBoxTextStyle"
+                    android:checked="true"
+                    android:text="You are going!"
+                    android:layout_margin="5dp"
+
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                style="@style/wholeCard">
+                <ImageView
+                    android:id="@+id/eventdescfullbleed"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:scaleType="center"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/map"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparantwhite">
+                    <TextView
+                        style="@style/cardConcertStatus"
+                        android:text="Map"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                style="@style/wholeCard">
+                <ImageView
+                    android:id="@+id/eventdescfullbleed"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:scaleType="center"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/leavingkorea"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparantwhite">
+                    <TextView
+                        style="@style/cardConcertStatus"
+                        android:text="Pictures"/>
+                </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/eventdesctext"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/eventdescfullbleed"
+                        android:layout_marginLeft="5px"
+                        android:layout_marginRight="5px"
+                        android:layout_marginTop="5px"
+                        android:layout_marginBottom="5px"
+                        >
+                        <RelativeLayout
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/commentholderimage"
+                                style="@style/cardFactIcon"
+                                android:src="@drawable/ic_action_pictures"/>
+                            <TextView
+                                android:layout_toRightOf="@+id/commentholderimage"
+                                android:layout_alignBottom="@id/commentholderimage"
+                                android:text="27 pictures"
+                                style="@style/cardFactText"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/pictureholderimage"
+                                style="@style/cardFactIcon"
+                                android:src="@drawable/ic_action_comments"/>
+                            <TextView
+                                android:layout_toRightOf="@+id/pictureholderimage"
+                                android:layout_alignBottom="@id/pictureholderimage"
+                                android:text="15 comments"
+                                style="@style/cardFactText"/>
+                        </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/artisthr"
+                    android:layout_below="@+id/eventdesctext"
+
+                    style="@style/horizontalRuler"
+                    />
+
+
+                <TextView
+                    android:id="@+id/artistdesctext"
+                    android:layout_below="@+id/artisthr"
+                    android:text="Upload pictures"
+
+                    style="@style/topCardText"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                style="@style/wholeCard">
+                <ImageView
+                    android:id="@+id/eventdescfullbleed"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:scaleType="center"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/video1"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparantwhite">
+                    <TextView
+                        style="@style/cardConcertStatus"
+                        android:text="Videos"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/eventdesctext"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eventdescfullbleed"
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="5px"
+                    android:layout_marginBottom="5px"
+                    >
+                    <RelativeLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:id="@+id/commentholderimage"
+                            style="@style/cardFactIcon"
+                            android:src="@drawable/ic_action_pictures"/>
+                        <TextView
+                            android:layout_toRightOf="@+id/commentholderimage"
+                            android:layout_alignBottom="@id/commentholderimage"
+                            android:text="1 videos"
+                            style="@style/cardFactText"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/pictureholderimage"
+                            style="@style/cardFactIcon"
+                            android:src="@drawable/ic_action_comments"/>
+                        <TextView
+                            android:layout_toRightOf="@+id/pictureholderimage"
+                            android:layout_alignBottom="@id/pictureholderimage"
+                            android:text="3 comments"
+                            style="@style/cardFactText"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                style="@style/wholeCard">
+                <LinearLayout
+                    android:id="@+id/divdiv"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparantwhite">
+                    <TextView
+                        style="@style/cardConcertStatus"
+                        android:text="Post"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eventdesctext"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divdiv"
+                    android:layout_marginLeft="5px"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="5px"
+                    android:layout_marginBottom="5px"
+                    >
+                        <TextView
+                        android:id="@+id/artistdesctext"
+                        android:layout_below="@+id/eventdesctext"
+                        android:text="Tonight is the night guys!"
+
+                        style="@style/topCardText"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/artisthr"
+                    android:layout_below="@+id/eventdesctext"
+
+                    style="@style/horizontalRuler"
+                    />
+
+                <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="Are you a fan?"
-                    android:layout_marginLeft="5px"
-                    android:layout_marginRight="5px"
-                    android:layout_marginTop="5px"
-                    android:layout_marginBottom="5px"
-                    />
+                    android:layout_below="@+id/artisthr"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0px">
+                    <ImageView
+                        android:id="@+id/typeholderimage"
+                        style="@style/cardFactIcon"
+                        android:src="@drawable/profile"/>
+                    <TextView
+                        android:layout_toRightOf="@+id/typeholderimage"
+                        android:layout_alignBottom="@id/typeholderimage"
+                        android:text="This is going to be awesome!!!"
+                        style="@style/cardFactText"/>
+
+                    <EditText
+                        android:fontFamily="sans-serif-light"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/typeholderimage"
+                        android:text="comment..."
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="0dp"
+                        />
+                </RelativeLayout>
+
             </RelativeLayout>
 
 
 
+
+
             <RelativeLayout
-                android:id="@+id/avengedsevenfoldannihalationtourstockholm"
-                android:onClick="cardPressed"
                 style="@style/wholeCard">
+                <LinearLayout
+                    android:id="@+id/stuffs"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparantwhite">
+                    <TextView
+                        style="@style/cardConcertStatus"
+                        android:text="Setlist"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/eventdesctext"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stuffs"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    >
+
+                    <TextView
+                        android:text="1. This Means War"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="2. Crimson Day"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="3. Heretic"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="4. Shepard of Fire"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="5. Doing Time"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="6. Coming Home"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="7. Acid Rain"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="8. Planets"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="9. Waking the Fallen"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="10. Unholy Confessions"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="11. Remenissions"
+                        style="@style/cardFactText"/>
+                    <TextView
+                        android:text="12. Hail to the King"
+                        style="@style/cardFactText"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/artisthr"
+                    android:layout_below="@+id/eventdesctext"
+
+                    style="@style/horizontalRuler"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/artisthr"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0px">
+                    <ImageView
+                        android:id="@+id/typeholderimage"
+                        style="@style/cardFactIcon"
+                        android:src="@drawable/profile2"/>
+                    <TextView
+                        android:layout_toRightOf="@+id/typeholderimage"
+                        android:layout_alignBottom="@id/typeholderimage"
+                        android:text="Wooow, finishing with Hail to the King!"
+                        style="@style/cardFactText"/>
+
+                    <EditText
+                        android:fontFamily="sans-serif-light"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/typeholderimage"
+                        android:text="comment..."
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="0dp"
+                        />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                style="@style/wholeCard"
+                android:layout_marginBottom="15dp">
                 <ImageView
                     android:id="@+id/eventdescfullbleed"
                     android:layout_height="wrap_content"
@@ -85,7 +515,7 @@
                     android:scaleType="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:src="@drawable/avengedsevenfoldfullbleed"/>
+                    android:src="@drawable/leavingkorea"/>
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -93,483 +523,76 @@
                     android:background="@color/transparantwhite">
                     <TextView
                         style="@style/cardConcertStatus"
-                        android:textStyle="bold"
-                        android:text="Planned"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text=">"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text="Ongoing"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text=">"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text="Past"/>
+                        android:text="Post"/>
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/eventdesctitle"
-                    android:layout_below="@+id/eventdescfullbleed"
-                    android:text="Annihalation Tour - Stockholm"
-                    style="@style/cardTitle"
-                    />
                 <LinearLayout
                     android:id="@+id/eventdesctext"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/eventdesctitle"
-                    android:layout_marginLeft="5px"
-                    android:layout_marginRight="5px"
-                    android:layout_marginTop="5px"
-                    android:layout_marginBottom="5px"
-                    >
-                    <RelativeLayout
-                        android:layout_width="0px"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:id="@+id/typeholderimage"
-                            style="@style/cardFactIcon"
-                            android:src="@drawable/ic_action_type"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/typeholderimage"
-                            android:layout_alignBottom="@id/typeholderimage"
-                            android:text="Concert"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/placeholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/typeholderimage"
-                            android:src="@drawable/ic_action_place"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/placeholderimage"
-                            android:layout_alignBottom="@id/placeholderimage"
-                            android:text="Globen, Stockholm, Sweden"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/dateholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/placeholderimage"
-                            android:src="@drawable/ic_action_date"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/dateholderimage"
-                            android:layout_alignBottom="@id/dateholderimage"
-                            android:text="2014-04-03"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/timeholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/dateholderimage"
-                            android:src="@drawable/ic_action_time"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/timeholderimage"
-                            android:layout_alignBottom="@id/timeholderimage"
-                            android:text="19:00-23:00"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/ageholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/timeholderimage"
-                            android:src="@drawable/ic_action_age"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/ageholderimage"
-                            android:layout_alignBottom="@id/ageholderimage"
-                            android:text="18+"
-                            style="@style/cardFactText"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="0px"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:id="@+id/postholderimage"
-                            style="@style/cardFactIcon"
-                            android:src="@drawable/ic_action_posts"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/postholderimage"
-                            android:layout_alignBottom="@id/postholderimage"
-                            android:text="4 posts by artist"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/commentholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/postholderimage"
-                            android:src="@drawable/ic_action_comments"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/commentholderimage"
-                            android:layout_alignBottom="@id/commentholderimage"
-                            android:text="15 comments"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/pictureholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/commentholderimage"
-                            android:src="@drawable/ic_action_pictures"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/pictureholderimage"
-                            android:layout_alignBottom="@id/pictureholderimage"
-                            android:text="27 pictures"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/videoholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/pictureholderimage"
-                            android:src="@drawable/ic_action_video"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/videoholderimage"
-                            android:layout_alignBottom="@id/videoholderimage"
-                            android:text="1 video"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/setlistholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/videoholderimage"
-                            android:src="@drawable/ic_action_setlist"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/setlistholderimage"
-                            android:layout_alignBottom="@id/setlistholderimage"
-                            android:text="Setlist available"
-                            style="@style/cardFactText"/>
-                    </RelativeLayout>
-                </LinearLayout>
-
-            </RelativeLayout>
-
-
-
-            <RelativeLayout
-                android:id="@+id/avengedsevenfoldannihalationtourberlin"
-                android:onClick="cardPressed"
-                style="@style/wholeCard">
-                <ImageView
-                    android:id="@+id/eventdescfullbleed"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:scaleType="center"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:src="@drawable/avengedsevenfoldfullbleed"/>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/transparantwhite">
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:textStyle="bold"
-                        android:text="Planned"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text=">"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text="Ongoing"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text=">"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text="Past"/>
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/eventdesctitle"
                     android:layout_below="@+id/eventdescfullbleed"
-                    android:text="Annihalation Tour - Stockholm"
-                    style="@style/cardTitle"
-                    />
-                <LinearLayout
-                    android:id="@+id/eventdesctext"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/eventdesctitle"
                     android:layout_marginLeft="5px"
                     android:layout_marginRight="5px"
                     android:layout_marginTop="5px"
                     android:layout_marginBottom="5px"
                     >
-                    <RelativeLayout
-                        android:layout_width="0px"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:id="@+id/typeholderimage"
-                            style="@style/cardFactIcon"
-                            android:src="@drawable/ic_action_type"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/typeholderimage"
-                            android:layout_alignBottom="@id/typeholderimage"
-                            android:text="Concert"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/placeholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/typeholderimage"
-                            android:src="@drawable/ic_action_place"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/placeholderimage"
-                            android:layout_alignBottom="@id/placeholderimage"
-                            android:text="Globen, Stockholm, Sweden"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/dateholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/placeholderimage"
-                            android:src="@drawable/ic_action_date"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/dateholderimage"
-                            android:layout_alignBottom="@id/dateholderimage"
-                            android:text="2014-04-03"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/timeholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/dateholderimage"
-                            android:src="@drawable/ic_action_time"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/timeholderimage"
-                            android:layout_alignBottom="@id/timeholderimage"
-                            android:text="19:00-23:00"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/ageholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/timeholderimage"
-                            android:src="@drawable/ic_action_age"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/ageholderimage"
-                            android:layout_alignBottom="@id/ageholderimage"
-                            android:text="18+"
-                            style="@style/cardFactText"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="0px"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:id="@+id/postholderimage"
-                            style="@style/cardFactIcon"
-                            android:src="@drawable/ic_action_posts"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/postholderimage"
-                            android:layout_alignBottom="@id/postholderimage"
-                            android:text="4 posts by artist"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/commentholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/postholderimage"
-                            android:src="@drawable/ic_action_comments"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/commentholderimage"
-                            android:layout_alignBottom="@id/commentholderimage"
-                            android:text="15 comments"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/pictureholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/commentholderimage"
-                            android:src="@drawable/ic_action_pictures"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/pictureholderimage"
-                            android:layout_alignBottom="@id/pictureholderimage"
-                            android:text="27 pictures"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/videoholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/pictureholderimage"
-                            android:src="@drawable/ic_action_video"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/videoholderimage"
-                            android:layout_alignBottom="@id/videoholderimage"
-                            android:text="1 video"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/setlistholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/videoholderimage"
-                            android:src="@drawable/ic_action_setlist"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/setlistholderimage"
-                            android:layout_alignBottom="@id/setlistholderimage"
-                            android:text="Setlist available"
-                            style="@style/cardFactText"/>
-                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/artistdesctext"
+                        android:layout_below="@+id/eventdesctext"
+                        android:text="Leaving Korea now. Headed for Sweden for annihalation!"
+
+                        style="@style/topCardText"
+                        />
                 </LinearLayout>
 
-            </RelativeLayout>
+                <View
+                    android:id="@+id/artisthr"
+                    android:layout_below="@+id/eventdesctext"
 
-
-
-            <RelativeLayout
-                android:id="@+id/avengedsevenfoldlifelineconcertlondon"
-                android:onClick="cardPressed"
-                style="@style/wholeCard">
-                <ImageView
-                    android:id="@+id/eventdescfullbleed"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:scaleType="center"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:src="@drawable/avengedsevenfoldfullbleed"/>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/transparantwhite">
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text="Planned"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text=">"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text="Ongoing"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:text=">"/>
-                    <TextView
-                        style="@style/cardConcertStatus"
-                        android:textStyle="bold"
-                        android:text="Past"/>
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/eventdesctitle"
-                    android:layout_below="@+id/eventdescfullbleed"
-                    android:text="Lifeline London"
-                    style="@style/cardTitle"
+                    style="@style/horizontalRuler"
                     />
-                <LinearLayout
-                    android:id="@+id/eventdesctext"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/eventdesctitle"
-                    android:layout_marginLeft="5px"
-                    android:layout_marginRight="5px"
-                    android:layout_marginTop="5px"
-                    android:layout_marginBottom="5px"
-                    >
-                    <RelativeLayout
-                        android:layout_width="0px"
+                    android:layout_below="@+id/artisthr"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0px">
+                    <ImageView
+                        android:id="@+id/typeholderimage"
+                        style="@style/cardFactIcon"
+                        android:src="@drawable/profile2"/>
+                    <TextView
+                        android:layout_toRightOf="@+id/typeholderimage"
+                        android:layout_alignBottom="@id/typeholderimage"
+                        android:text="Travelling in style I see!"
+                        style="@style/cardFactText"/>
+                    <ImageView
+                        android:id="@+id/placeholderimage"
+                        style="@style/cardFactIcon"
+                        android:layout_below="@+id/typeholderimage"
+                        android:src="@drawable/profile"/>
+                    <TextView
+                        android:layout_toRightOf="@+id/placeholderimage"
+                        android:layout_alignBottom="@id/placeholderimage"
+                        android:text="You guys are the best, safe travels."
+                        style="@style/cardFactText"/>
+                    <EditText
+                        android:fontFamily="sans-serif-light"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:id="@+id/typeholderimage"
-                            style="@style/cardFactIcon"
-                            android:src="@drawable/ic_action_type"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/typeholderimage"
-                            android:layout_alignBottom="@id/typeholderimage"
-                            android:text="Concert"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/placeholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/typeholderimage"
-                            android:src="@drawable/ic_action_place"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/placeholderimage"
-                            android:layout_alignBottom="@id/placeholderimage"
-                            android:text="Globen, Stockholm, Sweden"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/dateholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/placeholderimage"
-                            android:src="@drawable/ic_action_date"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/dateholderimage"
-                            android:layout_alignBottom="@id/dateholderimage"
-                            android:text="2014-04-03"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/timeholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/dateholderimage"
-                            android:src="@drawable/ic_action_time"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/timeholderimage"
-                            android:layout_alignBottom="@id/timeholderimage"
-                            android:text="19:00-23:00"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/ageholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/timeholderimage"
-                            android:src="@drawable/ic_action_age"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/ageholderimage"
-                            android:layout_alignBottom="@id/ageholderimage"
-                            android:text="18+"
-                            style="@style/cardFactText"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="0px"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:id="@+id/postholderimage"
-                            style="@style/cardFactIcon"
-                            android:src="@drawable/ic_action_posts"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/postholderimage"
-                            android:layout_alignBottom="@id/postholderimage"
-                            android:text="4 posts by artist"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/commentholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/postholderimage"
-                            android:src="@drawable/ic_action_comments"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/commentholderimage"
-                            android:layout_alignBottom="@id/commentholderimage"
-                            android:text="15 comments"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/pictureholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/commentholderimage"
-                            android:src="@drawable/ic_action_pictures"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/pictureholderimage"
-                            android:layout_alignBottom="@id/pictureholderimage"
-                            android:text="27 pictures"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/videoholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/pictureholderimage"
-                            android:src="@drawable/ic_action_video"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/videoholderimage"
-                            android:layout_alignBottom="@id/videoholderimage"
-                            android:text="1 video"
-                            style="@style/cardFactText"/>
-                        <ImageView
-                            android:id="@+id/setlistholderimage"
-                            style="@style/cardFactIcon"
-                            android:layout_below="@+id/videoholderimage"
-                            android:src="@drawable/ic_action_setlist"/>
-                        <TextView
-                            android:layout_toRightOf="@+id/setlistholderimage"
-                            android:layout_alignBottom="@id/setlistholderimage"
-                            android:text="Setlist available"
-                            style="@style/cardFactText"/>
-                    </RelativeLayout>
-                </LinearLayout>
+                        android:layout_below="@+id/placeholderimage"
+                        android:text="comment..."
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="0dp"
+                        />
+                </RelativeLayout>
 
             </RelativeLayout>
-
 
 
 

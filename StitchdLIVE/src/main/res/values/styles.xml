@@ -2,7 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light">
-        <item name="android:windowBackground">@color/StichdLIVEOrange</item>
+        <item name="android:windowBackground">@color/backgroundColorApp</item>
 
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
@@ -29,7 +29,8 @@
     </style>
 
     <style name="topCardText" parent="@android:style/TextAppearance.Small">
-        <item name="android:fontFamily">sans-serif-normal</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">0dp</item>
@@ -46,11 +47,19 @@
         <item name="android:background">@android:color/darker_gray</item>
     </style>
 
+    <style name="checkBoxTextStyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
 <!-- specific card stuff! -->
 
     <style name="wholeCard">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@android:color/white</item>
@@ -58,12 +67,13 @@
 
     <style name="cardConcertStatus" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:layout_width">0px</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:singleLine">true</item>
+        <item name="android:layout_margin">5dp</item>
     </style>
 
     <style name="cardTitle" parent="@android:style/TextAppearance.Medium">
@@ -83,7 +93,7 @@
 
     <style name="cardFactText" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
