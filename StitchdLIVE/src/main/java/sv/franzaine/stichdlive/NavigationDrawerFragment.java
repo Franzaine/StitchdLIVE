@@ -99,7 +99,7 @@ public class NavigationDrawerFragment extends Fragment {
         });
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
+                R.layout.listitem_d,
                 android.R.id.text1,
                 new String[]{
                         getString(R.string.title_section1),
@@ -247,8 +247,8 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == R.id.action_search) {
+            Toast.makeText(getActivity(), "search action not yet implemented.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
