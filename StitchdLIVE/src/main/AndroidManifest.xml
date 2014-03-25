@@ -19,7 +19,7 @@
 
         <activity
         android:name=".av7foldannisthlmactivity"
-        android:label="Annihalation Tour - Stockholm"
+        android:label="Annihilation Tour - Stockholm"
         android:parentActivityName="sv.franzaine.stichdlive.MainActivity" >
         </activity>
 

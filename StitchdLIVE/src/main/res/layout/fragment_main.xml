@@ -37,7 +37,7 @@
                 android:scaleType="center"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:src="@drawable/avengedsevenfoldfullbleed"/>
+                android:src="@drawable/band"/>
 
             <TextView
                 android:id="@+id/artistdesctitle"
@@ -79,7 +79,7 @@
 
 
             <RelativeLayout
-                android:id="@+id/avengedsevenfoldannihalationtourstockholm"
+                android:id="@+id/avengedsevenfoldannihilationtourstockholm"
                 android:onClick="cardPressed"
                 style="@style/wholeCard">
                 <ImageView
@@ -103,7 +103,7 @@
                 <TextView
                     android:id="@+id/eventdesctitle"
                     android:layout_below="@+id/eventdescfullbleed"
-                    android:text="Annihalation Tour - Stockholm"
+                    android:text="Annihilation Tour - Stockholm"
                     style="@style/cardTitle"
                     />
                 <LinearLayout
@@ -192,7 +192,7 @@
                         <TextView
                             android:layout_toRightOf="@+id/postholderimage"
                             android:layout_alignBottom="@id/postholderimage"
-                            android:text="4 posts by artist"
+                            android:text="2 posts by artist"
                             style="@style/cardFactText"/>
                         <ImageView
                             android:id="@+id/commentholderimage"
@@ -202,7 +202,7 @@
                         <TextView
                             android:layout_toRightOf="@+id/commentholderimage"
                             android:layout_alignBottom="@id/commentholderimage"
-                            android:text="15 comments"
+                            android:text="25 comments"
                             style="@style/cardFactText"/>
                         <ImageView
                             android:id="@+id/pictureholderimage"
@@ -241,8 +241,11 @@
 
 
 
+
+
+
             <RelativeLayout
-                android:id="@+id/avengedsevenfoldannihalationtourberlin"
+                android:id="@+id/avengedsevenfoldannihilationtourberlin"
                 style="@style/wholeCard">
                 <ImageView
                     android:id="@+id/eventdescfullbleed"
@@ -251,7 +254,7 @@
                     android:scaleType="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:src="@drawable/avengedsevenfoldfullbleed"/>
+                    android:src="@drawable/concert2"/>
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -265,7 +268,7 @@
                 <TextView
                     android:id="@+id/eventdesctitle"
                     android:layout_below="@+id/eventdescfullbleed"
-                    android:text="Annihalation Tour - Berlin"
+                    android:text="Annihilation Tour - Berlin"
                     style="@style/cardTitle"
                     />
                 <LinearLayout
@@ -354,7 +357,7 @@
                         <TextView
                             android:layout_toRightOf="@+id/postholderimage"
                             android:layout_alignBottom="@id/postholderimage"
-                            android:text="6 posts by artist"
+                            android:text="2 posts by artist"
                             style="@style/cardFactText"/>
                         <ImageView
                             android:id="@+id/commentholderimage"
@@ -364,7 +367,7 @@
                         <TextView
                             android:layout_toRightOf="@+id/commentholderimage"
                             android:layout_alignBottom="@id/commentholderimage"
-                            android:text="32 comments"
+                            android:text="5 comments"
                             style="@style/cardFactText"/>
                         <ImageView
                             android:id="@+id/pictureholderimage"
@@ -374,7 +377,7 @@
                         <TextView
                             android:layout_toRightOf="@+id/pictureholderimage"
                             android:layout_alignBottom="@id/pictureholderimage"
-                            android:text="215 pictures"
+                            android:text="2 pictures"
                             style="@style/cardFactText"/>
                         <ImageView
                             android:id="@+id/videoholderimage"
@@ -384,7 +387,7 @@
                         <TextView
                             android:layout_toRightOf="@+id/videoholderimage"
                             android:layout_alignBottom="@id/videoholderimage"
-                            android:text="7 videos"
+                            android:text="0 videos"
                             style="@style/cardFactText"/>
                         <ImageView
                             android:id="@+id/setlistholderimage"
@@ -394,7 +397,7 @@
                         <TextView
                             android:layout_toRightOf="@+id/setlistholderimage"
                             android:layout_alignBottom="@id/setlistholderimage"
-                            android:text="Setlist available"
+                            android:text="Setlist not available"
                             style="@style/cardFactText"/>
                     </RelativeLayout>
                 </LinearLayout>
@@ -415,7 +418,7 @@
                     android:scaleType="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:src="@drawable/avengedsevenfoldfullbleed"/>
+                    android:src="@drawable/concert3"/>
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -581,7 +584,7 @@
                     android:scaleType="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:src="@drawable/avengedsevenfoldfullbleed"/>
+                    android:src="@drawable/album"/>
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"

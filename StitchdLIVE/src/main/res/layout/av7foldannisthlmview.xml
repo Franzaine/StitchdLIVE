@@ -35,7 +35,7 @@
 
                 <TextView
                     android:id="@+id/artistdesctitle"
-                    android:text="Annihalation Tour - Stockholm"
+                    android:text="Annihilation Tour - Stockholm"
                     android:layout_below="@+id/artistdescfullbleed"
                     style="@style/topCardTitle"
                     />
@@ -539,7 +539,7 @@
                     <TextView
                         android:id="@+id/artistdesctext"
                         android:layout_below="@+id/eventdesctext"
-                        android:text="Leaving Korea now. Headed for Sweden for annihalation!"
+                        android:text="Leaving Korea now. Headed for Sweden for annihilation!"
 
                         style="@style/topCardText"
                         />
